@@ -9,7 +9,7 @@ on:
     branches:
       - master
     paths:
-      - 'x86_64/x86_64.config'
+      - 'x86_64/x86_64_passwall.config'
   schedule:
     - cron: 0 17 * * *
   # watch:
