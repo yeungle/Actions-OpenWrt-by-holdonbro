@@ -188,15 +188,6 @@ jobs:
         echo "status=success" >> "$GITHUB_OUTPUT"
 #        echo "::set-env name=FIRMWARE::$PWD"
 
-    - name: Organize files
-      id: organize
-      if: env.UPLOAD_FIRMWARE == 'true' && !cancelled()
-      run: |
-        cd openwrt/bin/targets/*/*
-        rm -rf packages
-        echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-        echo "status=success" >> $GITHUB_OUTPUT
-
     - name: Upload firmware directory
       uses: actions/upload-artifact@master
       if: env.UPLOAD_FIRMWARE == 'true' && steps.organize.outputs.status == 'success' && !cancelled()
