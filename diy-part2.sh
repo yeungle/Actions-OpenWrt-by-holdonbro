@@ -71,16 +71,16 @@
 #rm -rf immortalwrt-luci
 
 # 克隆openwrt-passwall仓库
-#git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git
-#cp -rf openwrt-passwall-packages/chinadns-ng package/chinadns-ng
-#cp -rf openwrt-passwall-packages/tcping package/tcping
-#cp -rf openwrt-passwall-packages/trojan-go package/trojan-go
-#cp -rf openwrt-passwall-packages/trojan-plus package/trojan-plus
-#cp -rf openwrt-passwall-packages/ssocks package/ssocks
-#cp -rf openwrt-passwall-packages/hysteria package/hysteria
-#cp -rf openwrt-passwall-packages/dns2tcp package/dns2tcp
-#cp -rf openwrt-passwall-packages/sing-box package/sing-box
-#rm -rf openwrt-passwall-packages
+git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git
+cp -rf openwrt-passwall-packages/chinadns-ng package/chinadns-ng
+cp -rf openwrt-passwall-packages/tcping package/tcping
+cp -rf openwrt-passwall-packages/trojan-go package/trojan-go
+cp -rf openwrt-passwall-packages/trojan-plus package/trojan-plus
+cp -rf openwrt-passwall-packages/ssocks package/ssocks
+cp -rf openwrt-passwall-packages/hysteria package/hysteria
+cp -rf openwrt-passwall-packages/dns2tcp package/dns2tcp
+cp -rf openwrt-passwall-packages/sing-box package/sing-box
+rm -rf openwrt-passwall-packages
 
 # 克隆openwrt-passwall2仓库
 #git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall2.git
@@ -177,8 +177,8 @@
 #sed -i "s|opt/kernel|BuildARMv8|g" package/luci-app-amlogic/root/etc/config/amlogic
 
 #添加argon-config 使用 最新argon
-#git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
-#git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
+git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config package/luci-app-argon-config
+git clone --depth=1 -b 18.06 https://github.com/jerrykuku/luci-theme-argon package/luci-theme-argon
 
 #修改makefile
 #find package/*/ -maxdepth 2 -path "*/Makefile" | xargs -i sed -i 's/include\ \.\.\/\.\.\/luci\.mk/include \$(TOPDIR)\/feeds\/luci\/luci\.mk/g' {}
@@ -197,10 +197,6 @@
 
 #find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-vssr/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-alt/shadowsocksr-libev-ssr-redir/g' {}
 #find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-vssr/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-server/shadowsocksr-libev-ssr-server/g' {}
-echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-rm -rf package/lean/luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon.git -b 18.06 package/luci-theme-argon
 git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
