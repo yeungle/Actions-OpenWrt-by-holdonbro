@@ -199,6 +199,8 @@
 #find package/*/ feeds/*/ -maxdepth 2 -path "*luci-app-vssr/Makefile" | xargs -i sed -i 's/shadowsocksr-libev-server/shadowsocksr-libev-ssr-server/g' {}
 echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+rm -rf package/lean/luci-theme-argon
+git clone https://github.com/jerrykuku/luci-theme-argon.git -b 18.06 package/luci-theme-argon
 git clone https://github.com/kongfl888/luci-app-adguardhome.git package/luci-app-adguardhome
 ./scripts/feeds update -a
 ./scripts/feeds install -a -f
