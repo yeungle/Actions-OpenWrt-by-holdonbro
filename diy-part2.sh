@@ -86,7 +86,6 @@ cp -rf openwrt-passwall-packages/pdnsd-alt package/pdnsd-alt
 cp -rf openwrt-passwall-packages/shadowsocks-rust package/shadowsocks-rust
 cp -rf openwrt-passwall-packages/shadowsocksr-libev package/shadowsocksr-libev
 cp -rf openwrt-passwall-packages/simple-obfs package/simple-obfs
-cp -rf openwrt-passwall-packages/shadowsocksr-libev package/shadowsocksr-libev
 cp -rf openwrt-passwall-packages/sing-box package/sing-box
 cp -rf openwrt-passwall-packages/ssocks package/ssocks
 cp -rf openwrt-passwall-packages/tcping package/tcping
@@ -109,26 +108,30 @@ cp -rf openwrt-passwall2/luci-app-passwall2 package/luci-app-passwall2
 # 克隆 helloworld 仓库
 git clone --depth=1 -b main https://github.com/fw876/helloworld.git
 # 从克隆的仓库中复制需要的目录
-cp -rf helloworld/naiveproxy package/naiveproxy
-cp -rf helloworld/lua-neturl package/lua-neturl
+cp -rf helloworld/chinadns-ng package/chinadns-ng
+cp -rf helloworld/dns2socks package/dns2socks
+cp -rf helloworld/dns2tcp package/dns2tcp
 cp -rf helloworld/gn package/gn
-cp -rf helloworld/xray-core package/xray-core
-cp -rf helloworld/xray-plugin package/xray-plugin
+cp -rf helloworld/hysteria package/hysteria
+cp -rf helloworld/ipt2socks package/ipt2socks
+cp -rf helloworld/lua-neturl package/lua-neturl
+cp -rf helloworld/luci-app-ssr-plus package/luci-app-ssr-plus
+cp -rf helloworld/microsocks package/microsocks
+cp -rf helloworld/mosdns package/mosdns
+cp -rf helloworld/naiveproxy package/naiveproxy
+cp -rf helloworld/redsocks2 package/redsocks2
 cp -rf helloworld/shadow-tls package/shadow-tls
 cp -rf helloworld/shadowsocks-rust package/shadowsocks-rust
 cp -rf helloworld/shadowsocksr-libev package/shadowsocksr-libev
-cp -rf helloworld/v2ray-plugin package/v2ray-plugin
 cp -rf helloworld/simple-obfs package/simple-obfs
+cp -rf helloworld/tcping package/tcping
 cp -rf helloworld/trojan package/trojan
-cp -rf helloworld/v2ray-core package/v2ray-core
-cp -rf helloworld/v2ray-geodata package/v2ray-geodata
-cp -rf helloworld/sagernet-core package/sagernet-core
-cp -rf helloworld/microsocks package/microsocks
-cp -rf helloworld/redsocks2 package/redsocks2
-cp -rf helloworld/ipt2socks package/ipt2socks
-cp -rf helloworld/dns2socks package/dns2socks
 cp -rf helloworld/tuic-client package/tuic-client
-cp -rf helloworld/luci-app-ssr-plus package/luci-app-ssr-plus
+cp -rf helloworld/v2ray-core package/v2ray-core
+cp -rf helloworld/v2ray-plugin package/v2ray-plugin
+cp -rf helloworld/v2raya package/v2raya
+cp -rf helloworld/xray-core package/xray-core
+cp -rf helloworld/xray-plugin package/xray-plugin
 #rm -rf helloworld
 
 # 克隆 kenzok8-packages 仓库
