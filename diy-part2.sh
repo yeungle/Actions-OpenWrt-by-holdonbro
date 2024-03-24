@@ -73,14 +73,32 @@ cp -rf immortalwrt-luci/applications/luci-app-udp2raw package/luci-app-udp2raw
 
 # 克隆openwrt-passwall仓库
 git clone --depth=1 https://github.com/xiaorouji/openwrt-passwall-packages.git
+cp -rf openwrt-passwall-packages/brook package/brook
 cp -rf openwrt-passwall-packages/chinadns-ng package/chinadns-ng
+cp -rf openwrt-passwall-packages/dns2socks package/dns2socks
+cp -rf openwrt-passwall-packages/dns2tcp package/dns2tcp
+cp -rf openwrt-passwall-packages/gn package/gn
+cp -rf openwrt-passwall-packages/hysteria package/hysteria
+cp -rf openwrt-passwall-packages/ipt2socks package/ipt2socks
+cp -rf openwrt-passwall-packages/microsocks package/microsocks
+cp -rf openwrt-passwall-packages/naiveproxy package/naiveproxy
+cp -rf openwrt-passwall-packages/pdnsd-alt package/pdnsd-alt
+cp -rf openwrt-passwall-packages/shadowsocks-rust package/shadowsocks-rust
+cp -rf openwrt-passwall-packages/shadowsocksr-libev package/shadowsocksr-libev
+cp -rf openwrt-passwall-packages/simple-obfs package/simple-obfs
+cp -rf openwrt-passwall-packages/shadowsocksr-libev package/shadowsocksr-libev
+cp -rf openwrt-passwall-packages/sing-box package/sing-box
+cp -rf openwrt-passwall-packages/ssocks package/ssocks
 cp -rf openwrt-passwall-packages/tcping package/tcping
 cp -rf openwrt-passwall-packages/trojan-go package/trojan-go
 cp -rf openwrt-passwall-packages/trojan-plus package/trojan-plus
-cp -rf openwrt-passwall-packages/ssocks package/ssocks
-cp -rf openwrt-passwall-packages/hysteria package/hysteria
-cp -rf openwrt-passwall-packages/dns2tcp package/dns2tcp
-cp -rf openwrt-passwall-packages/sing-box package/sing-box
+cp -rf openwrt-passwall-packages/trojan package/trojan
+cp -rf openwrt-passwall-packages/tuic-client package/tuic-client
+cp -rf openwrt-passwall-packages/v2ray-core package/v2ray-core
+cp -rf openwrt-passwall-packages/v2ray-geodata package/v2ray-geodata
+cp -rf openwrt-passwall-packages/v2ray-plugin package/v2ray-plugin
+cp -rf openwrt-passwall-packages/xray-core package/xray-core
+cp -rf openwrt-passwall-packages/xray-plugin package/xray-plugin
 #rm -rf openwrt-passwall-packages
 
 # 克隆openwrt-passwall2仓库
