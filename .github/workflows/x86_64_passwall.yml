@@ -1,4 +1,4 @@
-name: X86_64_passwall
+name: x86_64_passwall
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
     branches:
       - master
     paths:
-      - 'x86_64/X86_64_passwall.config'
+      - 'x86_64/x86_64_passwall.config'
   schedule:
     - cron: 0 17 * * *
   # watch:
@@ -19,7 +19,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: x86_64/X86_64_passwall.config
+  CONFIG_FILE: x86_64/x86_64_passwall.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   MRG_ADD_SH: x86_64/x86_64.sh
@@ -27,8 +27,8 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: false
   TZ: Asia/Shanghai
-  FILE_NAME: X86_64_passwall
-  PRODUCT_NAME: X86_64_passwall
+  FILE_NAME: x86_64_passwall
+  PRODUCT_NAME: x86_64_passwall
 
 jobs:
   build:
