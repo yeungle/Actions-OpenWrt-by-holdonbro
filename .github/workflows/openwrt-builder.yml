@@ -1,4 +1,4 @@
-name: x86_64_ssr
+name: openwrt-builder
 
 on:
   workflow_dispatch:
